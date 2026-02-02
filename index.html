@@ -745,9 +745,9 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            text-decoration: none;
-            color: white;
             display: block;
+            text-decoration: none;
+            color: inherit;
         }
 
         .certificate-card::before {
@@ -1129,7 +1129,7 @@
 <body>
     <div class="custom-cursor"></div>
 
-    <section class="hero-section">
+    <section class="hero-section" id="home">
         <nav>
             <div class="logo">&lt;<span>/</span>CyberSec&gt;</div>
             <ul class="nav-links">
@@ -1408,12 +1408,6 @@
                     <h3>LinkedIn</h3>
                     <p>/in/rohaansiddique</p>
                 </a>
-
-                <a href="https://twitter.com/rohaansiddique" target="_blank" class="contact-card reveal">
-                    <div class="contact-icon">🐦</div>
-                    <h3>Twitter</h3>
-                    <p>@rohaansiddique</p>
-                </a>
             </div>
         </div>
     </section>
@@ -1441,7 +1435,6 @@
                 <span class="footer-title">Connect</span>
                 <a href="https://github.com/rrohaan1/" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/rohaansiddique/" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/rohaansiddique" target="_blank">Twitter</a>
                 <a href="mailto:siddiquerohaan.combo@gmail.com">Email</a>
             </div>
         </div>
@@ -1636,6 +1629,7 @@
                 setTimeout(() => material.emissive.setHex(0x000000), 100);
             });
 
+            // Pause animation when tab is not visible
             document.addEventListener('visibilitychange', () => {
                 if (document.hidden) {
                     cancelAnimationFrame(animationId);
